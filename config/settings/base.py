@@ -19,6 +19,7 @@ environ.Env.read_env('.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+DEBUG = env.bool("DJANGO_DEBUG", False)
 
 
 # Application definition
