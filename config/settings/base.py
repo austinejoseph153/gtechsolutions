@@ -157,7 +157,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-# static and media files configurations
+# static files configurations
 STATIC_URL = '/static/'
 STATIC_ROOT = str(ROOT_DIR("staticfiles"))
 STATICFILES_DIRS = [str(APPS_DIR.path("static"))]
@@ -166,6 +166,7 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
+# media files configurations
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(APPS_DIR("media"))
 # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/media/'
