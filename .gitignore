@@ -1,5 +1,4 @@
-/venv
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
+# Environments
+.venv
+venv/
+ENV/
