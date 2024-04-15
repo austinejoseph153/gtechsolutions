@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
 import environ
+import dj_database_url
+
 
 ROOT_DIR = (environ.Path(__file__) - 3) # (techapps/config/settings/base.py - 3 = shoreusa/)
 APPS_DIR = ROOT_DIR.path("techapps")
@@ -37,9 +39,7 @@ THIRD_PARTY_APPS = [
     'ckeditor_uploader',
 ]
 LOCAL_APPS = [
-    'techapps.techemails.apps.TechemailsConfig',
     'techapps.techorders.apps.TechordersConfig',
-    'techapps.techusers.apps.TechusersConfig',
     'techapps.techblog.apps.TechblogConfig',
     'techapps.techpages.apps.TechpagesConfig'
 ]
@@ -89,27 +89,19 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DATABASE_NAME'),
-        'USER': env('DATABASE_USER'),
-        'PASSWORD': env('DATABASE_PASSWORD'),
-        'HOST': env('DATABASE_HOST', default='localhost'),
-        'PORT': ''
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': env('DATABASE_NAME'),
+    #     'USER': env('DATABASE_USER'),
+    #     'PASSWORD': env('DATABASE_PASSWORD'),
+    #     'HOST': env('DATABASE_HOST', default='localhost'),
+    #     'PORT': env('DATABASE_PORT')
+    # }
+    'default': dj_database_url.config(
+        default=env('DATABASE_URL'),
+        conn_max_age=600
+    )
 }
-
-# if 'RDS_DB_NAME' in os.environ:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': os.environ['RDS_DB_NAME'],
-#             'USER': os.environ['RDS_USERNAME'],
-#             'PASSWORD': os.environ['RDS_PASSWORD'],
-#             'HOST': os.environ['RDS_HOSTNAME'],
-#             'PORT': os.environ['RDS_PORT'],
-#         }
-#     }
 
 
 # Password validation
@@ -165,6 +157,8 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
+if not DEBUG:
+     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # media files configurations
 MEDIA_URL = '/media/'

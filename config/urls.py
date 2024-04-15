@@ -24,10 +24,8 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = i18n_patterns(
     path('', include('techapps.techpages.urls', namespace="techpages")),
-    path('api/',include('techapps.techusers.urls')),
-    path('api/',include('techapps.techemails.urls')),
-    path('api/',include('techapps.techorders.urls')),
-    path('',include('techapps.techblog.urls')),
+    path('api/',include('techapps.techorders.urls', namespace="techorders")),
+    path('',include('techapps.techblog.urls', namespace="techblog")),
    #  re_path('(?!.*(static))',TemplateView.as_view(template_name="index.html")),
    #  re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
    #  re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
