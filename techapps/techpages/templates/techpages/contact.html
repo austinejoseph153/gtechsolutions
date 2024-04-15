@@ -1,0 +1,110 @@
+{% extends 'frontend/base.html' %}
+{% load static i18n %}
+
+{% block content %}
+    <div class="auto-height"></div>
+    {% include 'frontend/layouts/message.html' %}
+    <!-- contact top -->
+    <div class="contact-top text-center text-light">
+        <div class="container">
+            <div class="contact-top-inner">
+                <h1>Contact us today</h1>
+                <p>We are here to help. Our team of experts are available to respond to your questions.</p>
+            </div>
+        </div>
+    </div>
+    <!-- contact informations -->
+    <div class="contact-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-detail text-center border-shadow">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>location</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-detail text-center border-shadow my-height">
+                        <i class="fas fa-phone"></i>
+                        <h3>phone</h3>
+                        <p>+234 90908274919</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-detail text-center border-shadow">
+                        <i class="fas fa-envelope-open"></i>
+                        <h3>email</h3>
+                        <p>gtechsolutions@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-area bg-gray">
+        <div class="container contact-area-inner">
+            <h2 class="heading text-center text-dark">Let's start a conversation</h2>
+            <div class="row">
+                <div class="contact-area-form">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstname">firstname</label>
+                                <input type="text" class="form-control" name="firstname" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="lastname">lastname</label>
+                                <input type="text" class="form-control" name="lastname" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">email</label>
+                                <input type="email" class="form-control" name="email" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">phone</label>
+                                <input type="tel" class="form-control" name="phone" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="message">message</label>
+                            <textarea class="form-control" rows="5" name="message" required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-form" type="submit">send message</button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block extra_js %}
+    <script>
+        function sameHeights(element_class){
+            var heights = new Array
+            $(element_class).each(function(idx,item){
+                heights.push(item.scrollHeight) 
+            })
+            var maxHeight = heights.sort()[heights.length - 1]
+            $(element_class).css("min-height", `${maxHeight}px`)
+        }
+
+        $(window).on('load', function() {
+            sameHeights(".info-detail")
+        });
+
+        $(window).on('resize', function() {
+            sameHeights(".info-detail")
+            $(".info-detail").each(function(idx,item){
+                console.log(item.scrollHeight) 
+            })
+        });              
+    </script>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends 'frontend/base.html' %}
+{% load static i18n custom_base_tags %}
+
+{% block content %}
+    <div class="auto-height"></div>
+    <!-- contact top -->
+    <div class="about-top text-center text-light">
+        <div class="container">
+            <div class="about-top-inner">
+                <h1>About us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nobis incidunt,
+                    blanditiis doloremque asperiores est, perspiciatis quidem, tenetur reprehenderit 
+                    temporibus labore sed eaque expedita.
+                    Ipsa laboriosam odit laborum nesciunt ullam?
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- about informations -->
+    <div class="team-area default-padding bottom-less">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2>Meet our team of experts</h2>
+                        <p>
+                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="chef-items">
+                    {% for x in 3|times%}
+                        <!-- Single Item -->
+                        <div class="col-md-4 single-item">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{% static 'frontend/img/desmond.jpg' %}" alt="Thumb">
+                                </div>
+                                <div class="info">
+                                    <div class="overlay">
+                                        <h4>Jessica Jones</h4>
+                                        <span>Backend Developer</span>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            Explain ten man uncivil engaged conduct. Am likewise betrayed as declared absolute do.
+                                        </p>
+                                        <ul>
+                                            <li class="facebook">
+                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li class="twitter">
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li class="linkedin">
+                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                            <li class="whatsapp">
+                                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Chef Area -->
+
+    <!-- Start Testimonials 
+    ============================================= -->
+    <div class="testimonials-area bg-gray carousel-shadow default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2>Testimonials</h2>
+                        <p>
+                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial-items testimonials-carousel owl-carousel owl-theme text-center">
+                        {% for review in 5|times %}
+                            <!-- Single Item -->
+                            <div class="item">
+                                <div class="thumb">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="clients-info">
+                                    <h5>Ahel John</h5>
+                                </div>
+                                <p>
+                                    Finished no horrible blessing landlord dwelling dissuade if. Rent fond am he in on read. Anxious cordial demands settled entered in do to colonel. 
+                                </p>
+                            </div>
+                            <!-- End Single Item -->
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+
+    <div class="mission-vision default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="statements text-center border-shadow less-padding">
+                        <h2>Mission</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ut dolorem, 
+                            accusamus aliquam, unde obcaecati illo alias blanditiis nostrum est soluta 
+                            facilis? Facere, necessitatibus ad. Quisquam dolorum inventore et reiciendis 
+                            repellendus voluptatibus ab quo exercitationem quasi eveniet eius cum, 
+                            labore ex iure eaque placeat dolorem porro saepe! Culpa, cupiditate sunt?
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="statements text-center border-shadow less-padding">
+                        <h2>Vision</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ut dolorem, 
+                            accusamus aliquam, unde obcaecati illo alias blanditiis nostrum est soluta 
+                            facilis? Facere, necessitatibus ad. Quisquam dolorum inventore et reiciendis 
+                            repellendus voluptatibus ab quo exercitationem quasi eveniet eius cum, 
+                            labore ex iure eaque placeat dolorem porro saepe! Culpa, cupiditate sunt?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

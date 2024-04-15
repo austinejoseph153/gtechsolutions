@@ -1,0 +1,68 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Font Google -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7COpen+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <!-- End Font Google -->
+    
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="{% static 'frontend/css/library/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/library/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/library/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/library/owl.theme.default.min.css' %}">
+    <!-- End Library CSS -->
+    
+    <link rel="stylesheet" href="{% static 'frontend/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/bootsnav.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/css/flaticon-set.css' %}">
+    {% block extra_css %} {% endblock %}
+    {% block extra_head %} {% endblock %}
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+</head>
+<body>
+    {% block header_navigation %}
+        {% include 'frontend/layouts/header.html' %}
+    {% endblock %}
+    
+    {% block content %} {% endblock %}
+
+    {% block footer_navigation %}
+        {% include 'frontend/layouts/footer.html' %}
+    {% endblock %}
+
+    <!-- Library JS -->
+    <script type="text/javascript" src="{% static 'frontend/js/library/jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/equal-height.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/imagesloaded.pkgd.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/isotope.pkgd.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/jquery.appear.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/jquery.easing.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/jquery.magnific-popup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/jquery.nice-select.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/modernizr.custom.13711.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/owl.carousel.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/wow.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/library/YTPlayer.min.js' %}"></script>
+    <!-- End Library JS -->
+    
+    <!-- Main Js -->
+    <script type="text/javascript" src="{% static 'frontend/js/bootsnav.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/count-to.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/main.js' %}"></script>
+    <!-- End Main Js -->
+    
+    {% block extra_js %} {% endblock %}
+    
+</body>
+</html>

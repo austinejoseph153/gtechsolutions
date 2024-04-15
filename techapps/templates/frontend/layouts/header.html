@@ -1,0 +1,92 @@
+<!-- Preloader -->
+<div id="preloader">
+    <div class="tb-cell">
+        <div id="page-loading">
+            <div></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+</div>
+<!-- End Preloader -->
+
+<!-- Start Header Top 
+============================================= -->
+<div class="top-bar-area inline">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 address-info text-left">
+                <div class="info box">
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope-open"></i> aulematins@gmail.com
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i> +2349098274919
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 social text-right">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Header Top -->
+
+<!-- Header 
+============================================= -->
+<header id="home">
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default navbar-fixed dark no-background bootsnav inc-border active-border">
+
+        <div class="container">
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="{% url 'techpages:home' %}">
+                    <img src="assets/img/logo.png" class="logo" alt="Logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                    <li>
+                        <a href="{% url 'techpages:home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'techblog:blog-list' %}">Blog</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'techpages:contact' %}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'techpages:about' %}">About</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+    <!-- End Navigation -->
+
+</header>
+<!-- End Header -->
+
+

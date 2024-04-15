@@ -1,0 +1,380 @@
+{% extends 'frontend/base.html' %}
+{% load static i18n custom_base_tags %}
+
+{% block content %}
+    <!-- Start banner 
+    ============================================= -->
+    <div class="banner-area bg-gray">
+        <div class="container banner-area-inner">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="banner-item-intro">
+                        <h2 class="heading">
+                            Give your brand the online presence it deserves with <span>Gtechsolution</span>. 
+                        </h2>
+                        <p class="banner-text">
+                            We develop functional and appealing websites.
+                            When it comes to creative website design and analysing data, we have 
+                            got it all covered. We are responsible for the sites performance and capacity,
+                            a personalized customer experience which is focused on the success of our clients businesses.
+                        </p>
+                        <div class="banner-links">
+                            <a href="{% url 'techpages:contact' %}">Get in touch</a>
+                        </div>
+                        <div class="banner-info">
+                            <div class="banner-info-item">
+                                <h3>5+</h3>
+                                <p>Years of experience</p>
+                            </div>
+                            <div class="banner-info-item">
+                                <h3>3+</h3>
+                                <p>Countries</p>
+                            </div>
+                            <div class="banner-info-item">
+                                <h3>22+</h3>
+                                <p>Completed projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 banner-item-container">
+                    <div class="banner-item-boxes">
+                        <div class="box-1"></div>
+                        <div class="box-2"></div>
+                        <div class="box-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end banner --> 
+
+    <!-- Start Values 
+    ============================================= -->
+    <div class="value-area bg-gray less-padding">
+        <div class="container value-area-inner">
+            <div class="site-heading no-margin text-center">
+                <h3>Why we are your number one choice</h3>
+            </div>
+            <div class="row value-items">
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-item border-shadow equal-height">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>accountability</h3>
+                        <p>
+                            We provide our clients with clear and accurate information about our operations
+                            as well as take full reponsibility for both our performance and business outcomes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-item border-shadow equal-height">
+                        <i class="fas fa-money-bill"></i>
+                        <h3>affordability</h3>
+                        <p>
+                            We offer quality services at a pocket friendly rate. Our services are available to our 
+                            customers at a cost that does not expose them to the risk of serious negative consequences.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-item border-shadow equal-height">
+                        <i class="fas fa-eye"></i>
+                        <h3>transparency</h3>
+                        <p>we provide access to relevant informations regarding the operation of our organization to our  
+                            amiable clients with intent to create clarity, trust and accountability.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="value-item border-shadow equal-height">
+                        <i class="fas fa-handshake"></i>
+                        <h3>dedication</h3>
+                        <p>
+                            The satisfaction of our customers is our ultimum goal. We take pride in our work and strive to exceed 
+                            expectations, in other to give you the high quality service you deserve.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="value-more-info text-center">
+                <div class="site-heading no-margin text-center">
+                    <h3>why hire us?</h3>
+                </div>
+                <p>
+                    We provide a wide range of top-notch services alongside having business goals 
+                    in mind. we have a track record of building amazing products that have proven
+                    without doubt to meet the standard of technology worldwide.
+                </p>
+                <button>Hire us</button>
+            </div>
+        </div>
+    </div>
+    <!-- end Values --> 
+    
+    <!-- Start services 
+    ============================================= -->
+    <div class="service-area no-margin less-padding bg-gray">
+        <div class="container">
+            <div class="service-area-inner">
+                <div class="site-heading no-margin text-center">
+                    <h3>Our offered Services</h3>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="service-items">
+                        <!-- service items starts here -->
+                        <div class="col-md-4">
+                            <div class="service-item border-shadow">
+                                <i class="fas fa-desktop"></i>
+                                <h3>web design</h2>
+                                <p>
+                                    We design visual appealing and functional websites with better layouts and user
+                                    experience to help our clients create a compelling and powerful first impression. 
+                                </p>
+                            </div>
+                        </div>
+                        <!-- service item ends -->
+                        <!-- service items starts here -->
+                        <div class="col-md-4">
+                            <div class="service-item border-shadow">
+                                <i class="fas fa-code"></i>
+                                <h3>web development</h2>
+                                <p>
+                                    Building both the visual aspect and website structure of web application to meet
+                                    our client's expectation as well as providing maintenance, update and trouble shooting problems. 
+                                </p>
+                            </div>
+                        </div>
+                        <!-- service item ends -->
+                        <!-- service items starts here -->
+                        <div class="col-md-4">
+                            <div class="service-item border-shadow">
+                                <i class="fas fa-search"></i>
+                                <h3>app development</h2>
+                                <p>
+                                    Designing and coding innovative and fully functional software applications for businesses
+                                    and organizations that can run accross all platforms and are tailored to meet client's needs.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- service item ends -->
+                        <!-- service items starts here -->
+                        <div class="col-md-4">
+                            <div class="service-item border-shadow">
+                                <i class="fas fa-search"></i>
+                                <h3>SEO expert</h2>
+                                <p>
+                                    helping businesses better position themselves on search engines to receive traffic from their target market.
+                                    ensures page optimization to produce relevants research and a positive user experience.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- service item ends -->
+                        <!-- service items starts here -->
+                        <div class="col-md-4">
+                            <div class="service-item border-shadow">
+                                <i class="fas fa-handshake"></i>
+                                <h3>data analysis</h2>
+                                <p>
+                                    collecting, organizing and analyzing data and build statistical model for practical, real-world
+                                     scenarios thereby helping businesses to solve a specific problem and make better, profitable decisions. 
+                                </p>
+                            </div>
+                        </div>
+                        <!-- service item ends -->
+                        <!-- service items starts here -->
+                        <div class="col-md-4">
+                            <div class="service-item border-shadow">
+                                <i class="fas fa-database"></i>
+                                <h3>database management</h2>
+                                <p>
+                                    We create and manage systems that stores data for companies.
+                                    enhancing the capacity of an organization's database by developing procedures to ensure 
+                                    data integrity.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- service item ends -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end services -->
+
+    <!-- Start Testimonials 
+    ============================================= -->
+    <div class="testimonials-area bg-gray carousel-shadow less-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h3>Testimonials</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testimonial-items testimonials-carousel owl-carousel owl-theme text-center">
+                        {% if testimonies|length > 0 %}
+                            {% for testimony in testimonies %}
+                            <!-- Single Item -->
+                            <div class="item">
+                                <div class="thumb">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="clients-info">
+                                    <h5>{{testimony.fullname}}</h5>
+                                </div>
+                                <p>
+                                    {{testimony.message}} 
+                                </p>
+                                <span><i class="fas fa-calendar-alt"></i> {{testimony.date}}</span>
+                            </div>
+                            <!-- End Single Item -->
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials -->
+
+    <!-- Start comment form 
+    ============================================= -->
+        <div class="comment-area less-padding no-margin-top bg-gray">
+            <div class="container comment-area-inner">
+                <h2 class="heading text-center">what's your experience working with us?</h2>
+                <div class="row">
+                    <div class="comment-area-form">
+                        <form action="#" class="post-form container-half" onsubmit="postComment()">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="firstname" class="form-control" required placeholder="Firstname">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="lastname" class="form-control" required placeholder="Lastname">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" required placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="message" rows="5" required placeholder="Enter comments here..."></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-form" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End comment form -->
+    
+    <!-- modal starts here -->
+    <div class="modal fade modal-show-info" id="modal-show-info" tabindex="-1" data-backdrop="false">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Your review has been successfully submitted.  
+                </p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">ok</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- modal ends here -->
+{% endblock %}
+{% block extra_js %}
+    <script>
+        const csrftoken = "{{ csrf_token }}";
+        
+        function showModal(title,body_text){
+            $("#modal-show-info").modal("show")
+            $("#modal-show-info .modal-content .modal-header .modal-title").html(title)
+            $("#modal-show-info .modal-content .modal-body").html(body_text)
+        }
+
+        function postComment(){
+            event.preventDefault();
+            var firstname = $('input[name="firstname"]').val()
+            var lastname = $('input[name="lastname"]').val()
+            var email = $('input[name="email"]').val()
+            var message = $('textarea[name="message"]').val()
+            
+            $.ajax({
+                    type:'POST',
+                    url:"{% url 'techorders:reviews' %}",
+                    beforeSend: function(request){
+                        request.setRequestHeader("X-CSRFToken", csrftoken);
+                    },
+                    data:{firstname:firstname, 
+                            lastname:lastname, 
+                            email:email, 
+                            message:message, 
+                            csrfmiddlewaretoken: csrftoken},
+                    success:function(response){
+                        if(response["response"] == "error"){
+                            var title = '<i class="fas fa-times-circle modal-error"></i>'
+                            var body_text = `<div>
+                                                <p>
+                                                    Sorry an error occurred and your message was not submitted.
+                                                </p>
+                                            </div>`
+                            showModal(title, body_text)
+                        }else{
+                            var title = '<i class="fas fa-check-circle modal-success"></i>'
+                            var body_text = `<div>
+                                                <p>
+                                                    Your message has been successfully submitted. thank you for your input 
+                                                </p>
+                                            </div>`
+                            showModal(title, body_text)
+                            $(".post-form").find(".form-control").each(function(idx,item){
+                                $(this).val("")
+                            })
+                            
+                        }   
+                    },
+                    error: function(response){
+                        if(response["status"] == 400){
+                            var title = '<i class="fas fa-times-circle modal-error"></i>'
+                            var body_text = `<div>
+                                                <p>
+                                                    could not process request, you may have submitted a wrong data.
+                                                    please check that fields are correctly entered and try again.
+                                                </p>
+                                            </div>`
+                            showModal(title, body_text)
+                        }else if(response["status"] == 500){
+                            var title = '<i class="fas fa-times-circle modal-error"></i>'
+                            var body_text = `<div>
+                                                <p>
+                                                    we are unable to process your request at the moment due to an error with our server.
+                                                    please try again later, thank you.
+                                                </p>
+                                            </div>`
+                            showModal(title, body_text)
+   
+                        }
+                    }
+                })
+            }
+
+    </script>
+{% endblock %}
