@@ -174,7 +174,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587.
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = 'austinejoseph60@gmail.com'
-DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_EMAIL = ""
 
 # aws email configurations for production environment
 # EMAIL_BACKEND = 'django_ses.SESBackend'

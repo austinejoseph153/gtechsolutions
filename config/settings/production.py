@@ -74,19 +74,19 @@ DEFAULT_FROM_EMAIL = env("DJANGO_DEFAULT_FROM_EMAIL", default="")
 SERVER_EMAIL = env("DJANGO_SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-subject-prefix
 EMAIL_SUBJECT_PREFIX = env(
-    "DJANGO_EMAIL_SUBJECT_PREFIX", default="[Shorexc]"
+    "DJANGO_EMAIL_SUBJECT_PREFIX", default=""
 )
 EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
-EMAIL_HOST = env('DJANGO_EMAIL_HOST')
-EMAIL_HOST_USER = env('DJANGO_EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('DJANGO_EMAIL_HOST_PASSWORD')
+EMAIL_HOST = env('DJANGO_EMAIL_HOST', default="")
+EMAIL_HOST_USER = env('DJANGO_EMAIL_HOST_USER', default="")
+EMAIL_HOST_PASSWORD = env('DJANGO_EMAIL_HOST_PASSWORD', default="")
 EMAIL_PORT = env('DJANGO_EMAIL_PORT', default=587)
 EMAIL_USE_TLS = env('DJANGO_EMAIL_USE_TLS', default=True)
 
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL regex.
-ADMIN_URL = env("DJANGO_ADMIN_URL")
+# ADMIN_URL = env("DJANGO_ADMIN_URL")
 
 
 '''
