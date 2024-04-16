@@ -89,18 +89,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': env('DATABASE_NAME'),
-    #     'USER': env('DATABASE_USER'),
-    #     'PASSWORD': env('DATABASE_PASSWORD'),
-    #     'HOST': env('DATABASE_HOST', default='localhost'),
-    #     'PORT': env('DATABASE_PORT')
-    # }
-    'default': dj_database_url.config(
-        default=env('DATABASE_URL'),
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST', default='localhost'),
+        'PORT': 3306
+    }
+    # 'default': dj_database_url.config(
+    #     default=env('DATABASE_URL'),
+    #     conn_max_age=600
+    # )
 }
 
 
@@ -157,8 +157,8 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-if not DEBUG:
-     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# if not DEBUG:
+#      STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # media files configurations
 MEDIA_URL = '/media/'
