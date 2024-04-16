@@ -30,6 +30,10 @@ class AboutTemplateView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(AboutTemplateView, self).get_context_data(**kwargs)
+        testimonies = Testimonials.objects.filter(positive=True).order_by("-id")[:5]
+        if not testimonies:
+            testimonies = fetch_testimonies_from_files()
+        context["testimonies"] = testimonies
         return context
 
 class ContactTemplateView(FormMixin,TemplateView):

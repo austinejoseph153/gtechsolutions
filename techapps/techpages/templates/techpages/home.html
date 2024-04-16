@@ -10,7 +10,7 @@
                 <div class="col-md-6">
                     <div class="banner-item-intro">
                         <h2 class="heading">
-                            Give your brand the online presence it deserves with <span>Gtechsolution</span>. 
+                            Give your brand the online presence it deserves with <span>Gtechsolutions</span>. 
                         </h2>
                         <p class="banner-text">
                             We develop functional and appealing websites.
@@ -58,7 +58,7 @@
             </div>
             <div class="row value-items">
                 <div class="col-md-6 col-lg-3">
-                    <div class="value-item border-shadow equal-height">
+                    <div class="value-item border-shadow values-height">
                         <i class="fas fa-balance-scale"></i>
                         <h3>accountability</h3>
                         <p>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="value-item border-shadow equal-height">
+                    <div class="value-item border-shadow values-height">
                         <i class="fas fa-money-bill"></i>
                         <h3>affordability</h3>
                         <p>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="value-item border-shadow equal-height">
+                    <div class="value-item border-shadow values-height">
                         <i class="fas fa-eye"></i>
                         <h3>transparency</h3>
                         <p>we provide access to relevant informations regarding the operation of our organization to our  
@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="value-item border-shadow equal-height">
+                    <div class="value-item border-shadow values-height">
                         <i class="fas fa-handshake"></i>
                         <h3>dedication</h3>
                         <p>
@@ -150,7 +150,7 @@
                         <!-- service items starts here -->
                         <div class="col-md-4">
                             <div class="service-item border-shadow">
-                                <i class="fas fa-search"></i>
+                                <i class="fas fa-shopping-bag"></i>
                                 <h3>app development</h2>
                                 <p>
                                     Designing and coding innovative and fully functional software applications for businesses
@@ -210,7 +210,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h3>Testimonials</h3>
+                        <h3>customers Reviews</h3>
                     </div>
                 </div>
             </div>
@@ -220,7 +220,7 @@
                         {% if testimonies|length > 0 %}
                             {% for testimony in testimonies %}
                             <!-- Single Item -->
-                            <div class="item">
+                            <div class="item review-height">
                                 <div class="thumb">
                                     <i class="fas fa-user"></i>
                                 </div>
@@ -246,7 +246,7 @@
     ============================================= -->
         <div class="comment-area less-padding no-margin-top bg-gray">
             <div class="container comment-area-inner">
-                <h2 class="heading text-center">what's your experience working with us?</h2>
+                <h2 class="heading text-center">leave us a review</h2>
                 <div class="row">
                     <div class="comment-area-form">
                         <form action="#" class="post-form container-half" onsubmit="postComment()">
@@ -267,7 +267,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <textarea class="form-control" name="message" rows="5" required placeholder="Enter comments here..."></textarea>
+                                    <textarea class="form-control" name="message" rows="5" required placeholder="Write reviews here..."></textarea>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -282,20 +282,20 @@
     
     <!-- modal starts here -->
     <div class="modal fade modal-show-info" id="modal-show-info" tabindex="-1" data-backdrop="false">
-        <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title"></h5>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Your review has been successfully submitted.  
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">ok</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>
-                    Your review has been successfully submitted.  
-                </p>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn" data-dismiss="modal">ok</button>
-            </div>
-        </div>
         </div>
     </div>
     <!-- modal ends here -->
@@ -309,6 +309,30 @@
             $("#modal-show-info .modal-content .modal-header .modal-title").html(title)
             $("#modal-show-info .modal-content .modal-body").html(body_text)
         }
+        function SameHeight(element_class){
+            // create a new array instance
+            var heights = new Array()
+            // loop through elements and get the maximum value
+            $(element_class).each(function(){
+                heights.push($(this).outerHeight())
+            })
+            // change all element height to maximum value
+            max_height = Math.max(...heights)
+            $(element_class).each(function(){
+                $(this).css("height", max_height)
+            })
+        }
+
+        $(window).on('load', function() {
+            SameHeight(".values-height")
+            SameHeight(".service-item")
+            SameHeight(".review-height")
+        });
+        $(window).on('resize', function() {
+            SameHeight(".values-height")
+            SameHeight(".service-item")
+            SameHeight(".review-height")
+        });
 
         function postComment(){
             event.preventDefault();
@@ -333,7 +357,7 @@
                             var title = '<i class="fas fa-times-circle modal-error"></i>'
                             var body_text = `<div>
                                                 <p>
-                                                    Sorry an error occurred and your message was not submitted.
+                                                    Sorry an error occurred and your review was not submitted.
                                                 </p>
                                             </div>`
                             showModal(title, body_text)
@@ -341,7 +365,7 @@
                             var title = '<i class="fas fa-check-circle modal-success"></i>'
                             var body_text = `<div>
                                                 <p>
-                                                    Your message has been successfully submitted. thank you for your input 
+                                                    Your review has been successfully submitted. thank you for your input 
                                                 </p>
                                             </div>`
                             showModal(title, body_text)

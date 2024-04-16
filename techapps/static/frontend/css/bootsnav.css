@@ -173,9 +173,10 @@ nav.bootsnav .dropdown.megamenu-fw {
   
   nav.navbar.bootsnav .navbar-toggle {
     background-color: transparent !important;
+    color: var(--Teal-blue);
     border: none;
     padding: 0;
-    font-size: 18px;
+    font-size: 29px;
     position: relative;
     top: 5px;
   }
@@ -627,7 +628,13 @@ nav.bootsnav .dropdown.megamenu-fw {
       text-transform: uppercase;
     }
     nav.navbar.bootsnav .navbar-brand {
-      padding: 20px 15px;
+      /* padding: 20px 15px; */
+      margin-top: 20px;
+      color: var(--Teal-blue);
+    }
+    nav.navbar.bootsnav .navbar-brand span{
+      font-size: 28px;
+      font-weight: bold;
     }
   
     nav.navbar.bootsnav.sticked .navbar-brand {
@@ -1003,7 +1010,6 @@ nav.bootsnav .dropdown.megamenu-fw {
       display: inline-block;
       float: left;
       margin-right: -200px;
-      margin-top: 15px;
     }
   
     .attr-nav > ul > li {
@@ -1038,6 +1044,11 @@ nav.bootsnav .dropdown.megamenu-fw {
   
     .navbar-brand > img {
       height: 30px !important;
+    }
+    .navbar-brand > span {
+      color: var(--Teal-blue);
+      font-weight: bold;
+      font-size: 24px;
     }
   
     nav.navbar.bootsnav.navbar-transparent.pad-top {

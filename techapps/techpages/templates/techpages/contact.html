@@ -21,7 +21,7 @@
                     <div class="info-detail text-center border-shadow">
                         <i class="fas fa-map-marker-alt"></i>
                         <h3>location</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Victor Malu Road Crescent, Kanshio, New GRA, Makurdi, Benue States, Nigeria</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -87,24 +87,26 @@
 {% endblock %}
 {% block extra_js %}
     <script>
-        function sameHeights(element_class){
-            var heights = new Array
-            $(element_class).each(function(idx,item){
-                heights.push(item.scrollHeight) 
+        function SameHeight(element_class){
+            // create a new array instance
+            var heights = new Array()
+            // loop through elements and get the maximum value
+            $(element_class).each(function(){
+                heights.push($(this).outerHeight())
             })
-            var maxHeight = heights.sort()[heights.length - 1]
-            $(element_class).css("min-height", `${maxHeight}px`)
+            // change all element height to maximum value
+            max_height = Math.max(...heights)
+            $(element_class).each(function(){
+                $(this).css("height", max_height)
+            })
         }
 
         $(window).on('load', function() {
-            sameHeights(".info-detail")
+            SameHeight(".info-detail")
         });
 
         $(window).on('resize', function() {
-            sameHeights(".info-detail")
-            $(".info-detail").each(function(idx,item){
-                console.log(item.scrollHeight) 
-            })
+            SameHeight(".info-detail")
         });              
     </script>
 {% endblock %}

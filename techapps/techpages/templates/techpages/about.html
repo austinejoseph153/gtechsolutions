@@ -23,50 +23,79 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="site-heading text-center">
                         <h2>Meet our team of experts</h2>
-                        <p>
-                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
-                        </p>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="chef-items">
-                    {% for x in 3|times%}
-                        <!-- Single Item -->
-                        <div class="col-md-4 single-item">
-                            <div class="item">
-                                <div class="thumb">
-                                    <img src="{% static 'frontend/img/desmond.jpg' %}" alt="Thumb">
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="{% static 'frontend/img/desmond.jpg' %}" alt="Thumb">
+                            </div>
+                            <div class="info">
+                                <div class="overlay">
+                                    <h4>Desmond richman</h4>
+                                    <span>Full Stack Developer</span>
                                 </div>
-                                <div class="info">
-                                    <div class="overlay">
-                                        <h4>Jessica Jones</h4>
-                                        <span>Backend Developer</span>
-                                    </div>
-                                    <div class="content">
-                                        <p>
-                                            Explain ten man uncivil engaged conduct. Am likewise betrayed as declared absolute do.
-                                        </p>
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                            </li>
-                                            <li class="linkedin">
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li class="whatsapp">
-                                                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="content">
+                                    <p>
+                                        Explain ten man uncivil engaged conduct. Am likewise betrayed as declared absolute do.
+                                    </p>
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="https://wa.me/+2349137146149"><i class="fab fa-whatsapp"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Single Item -->
-                    {% endfor %}
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="{% static 'frontend/img/gospel.jpg' %}" alt="Thumb">
+                            </div>
+                            <div class="info">
+                                <div class="overlay">
+                                    <h4>Gospel Yimase</h4>
+                                    <span>Data analyst & Graphics designer</span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        Explain ten man uncivil engaged conduct. Am likewise betrayed as declared absolute do.
+                                    </p>
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="https://wa.me/+2349063325704"><i class="fab fa-whatsapp"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
                 </div>
             </div>
         </div>
@@ -80,31 +109,31 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h2>Testimonials</h2>
-                        <p>
-                            While mirth large of on front. Ye he greater related adapted proceed entered an. Through it examine express promise no. Past add size game cold girl off how old
-                        </p>
+                        <h2>Reviews</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="testimonial-items testimonials-carousel owl-carousel owl-theme text-center">
-                        {% for review in 5|times %}
+                        {% if testimonies|length > 0 %}
+                            {% for testimony in testimonies %}
                             <!-- Single Item -->
-                            <div class="item">
+                            <div class="item review-height">
                                 <div class="thumb">
                                     <i class="fas fa-user"></i>
                                 </div>
                                 <div class="clients-info">
-                                    <h5>Ahel John</h5>
+                                    <h5>{{testimony.fullname}}</h5>
                                 </div>
                                 <p>
-                                    Finished no horrible blessing landlord dwelling dissuade if. Rent fond am he in on read. Anxious cordial demands settled entered in do to colonel. 
+                                    {{testimony.message}} 
                                 </p>
+                                <span><i class="fas fa-calendar-alt"></i> {{testimony.date}}</span>
                             </div>
                             <!-- End Single Item -->
-                        {% endfor %}
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -116,24 +145,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="statements text-center border-shadow less-padding">
+                    <div class="statements text-center border-shadow">
                         <h2>Mission</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ut dolorem, 
                             accusamus aliquam, unde obcaecati illo alias blanditiis nostrum est soluta 
                             facilis? Facere, necessitatibus ad. Quisquam dolorum inventore et reiciendis 
-                            repellendus voluptatibus ab quo exercitationem quasi eveniet eius cum, 
-                            labore ex iure eaque placeat dolorem porro saepe! Culpa, cupiditate sunt?
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="statements text-center border-shadow less-padding">
+                    <div class="statements text-center border-shadow">
                         <h2>Vision</h2>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ut dolorem, 
                             accusamus aliquam, unde obcaecati illo alias blanditiis nostrum est soluta 
                             facilis? Facere, necessitatibus ad. Quisquam dolorum inventore et reiciendis 
-                            repellendus voluptatibus ab quo exercitationem quasi eveniet eius cum, 
-                            labore ex iure eaque placeat dolorem porro saepe! Culpa, cupiditate sunt?
                         </p>
                     </div>
                 </div>
@@ -141,4 +166,28 @@
         </div>
     </div>
     
+{% endblock %}
+{% block extra_js %}
+    <script>
+        function SameHeight(element_class){
+            // create a new array instance
+            var heights = new Array()
+            // loop through elements and get the maximum value
+            $(element_class).each(function(){
+                heights.push($(this).outerHeight())
+            })
+            // change all element height to maximum value
+            max_height = Math.max(...heights)
+            $(element_class).each(function(){
+                $(this).css("height", max_height)
+            })
+        }
+        $(window).on('load', function() {
+            SameHeight(".review-height")
+        });
+        $(window).on('resize', function() {
+           SameHeight(".review-height")
+        });
+
+    </script>
 {% endblock %}

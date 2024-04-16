@@ -88,21 +88,24 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# if DEBUG:
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': env('DATABASE_NAME'),
-    #     'USER': env('DATABASE_USER'),
-    #     'PASSWORD': env('DATABASE_PASSWORD'),
-    #     'HOST': env('DATABASE_HOST', default='localhost'),
-    #     'PORT': 3306
-    # }
-    'default': dj_database_url.config(
-        default=env('DATABASE_URL'),
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST', default='localhost'),
+        'PORT': 3306
+    }
 }
-
+# else:
+#     DATABASES = {
+#         'default': dj_database_url.config(
+#             default=env('DATABASE_URL'),
+#             conn_max_age=600
+#         )
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -157,8 +160,6 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
-# if not DEBUG:
-#      STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # media files configurations
 MEDIA_URL = '/media/'
