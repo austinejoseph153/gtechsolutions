@@ -869,6 +869,9 @@ Table of contents
     .container-half{
       width: 100%;
     }
+    .banner-area .banner-area-inner .banner-item-intro .banner-text{
+      margin-top: 40px;
+    }
   }
   @media only screen and (max-width: 482px){
 
@@ -1018,7 +1021,9 @@ Table of contents
     color: var(--Teal-blue);
     margin-bottom: 30px;
   }
-
+  .comment-area .comment-area-inner .comment-area-form{
+    padding: 0 20px;
+  }
   .comment-area .comment-area-inner .comment-area-form .container-half .form-group{
     
   }
@@ -1921,9 +1926,6 @@ Table of contents
   =================================================================== */
   .team-area .single-item {
     margin-bottom: 30px;
-  }
-  .team-area .single-item .item .thumb img{
-    height: 200px;
   }
   .team-area .info {
     position: relative;
