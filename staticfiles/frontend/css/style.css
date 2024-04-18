@@ -876,7 +876,7 @@ Table of contents
       margin-top: 40px;
     }
     .banner-area .banner-area-inner .banner-item-intro .heading{
-      font-size: 36px;
+      font-size: 32px;
     }
   }
   @media only screen and (max-width: 482px){
@@ -891,6 +891,13 @@ Table of contents
     .banner-area .banner-area-inner .banner-item-intro .banner-info{
       flex-direction: column;
       border: none;
+      background: #ffffff;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 40px;
+      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .banner-area .banner-area-inner .banner-item-intro .banner-links a{
       width: 100%;
@@ -954,7 +961,7 @@ Table of contents
 
   .value-area .value-area-inner .value-item{
     background-color: #fff;
-    padding: 20px 10px;
+    padding: 20px 15px;
     text-align: center;
     border-radius: 5px;
   }
@@ -1947,7 +1954,7 @@ Table of contents
   .team-area .info .overlay {
     position: absolute;
     left: 50%;
-    top: -40px;
+    top: -30px;
     transform: translate(-50%, 0);
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
@@ -1955,33 +1962,32 @@ Table of contents
     -o-transform: translate(-50%, 0);
     text-align: center;
     background: #ffffff;
-    padding: 20px;
-    width: 80%;
+    padding: 15px 10px;
+    width: 90%;
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
   }
   
   .team-area .info .content {
-    padding-top: 20px;
     border-top: 1px solid #e7e7e7;
+    margin-top: 30px;
   }
   
   .team-area .info .overlay h4 {
     text-transform: capitalize;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: var(--Teal-blue);
     text-transform: capitalize;
   }
   
   .team-area .info .overlay span {
     font-family: 'Poppins', sans-serif;
-    color: var(--dark-theme);
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     display: inline-block;
-    border: 1px solid var(--light-blue);
-    padding: 5px 30px;
+    border: 1px solid var(--Teal-blue);
+    padding: 10px 20px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -2232,7 +2238,7 @@ Table of contents
   
   }
   .contact-top .contact-top-inner h1{
-    
+    margin-bottom: 30px;
   }
   .contact-top .contact-top-inner p{
     
@@ -2329,7 +2335,7 @@ Table of contents
     padding-top: 120px;
     padding-bottom: 120px;
     /* background: linear-gradient(rgba(87, 87, 87, 0.7),rgba(87, 87, 87, 0.7),rgba(87, 87, 87, 0.7)),url("../img/about-bg.jpg"); */
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../img/about-bg.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/about-bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2338,7 +2344,7 @@ Table of contents
   
   }
   .about-top .about-top-inner h1{
-    
+    margin-bottom: 30px;
   }
   .about-top .about-top-inner p{
     color: white;
@@ -2346,7 +2352,8 @@ Table of contents
     margin: 0 auto;
   }
   .mission-vision .statements{
-    padding: 20px 15px;
+    padding: 40px 15px;
+    min-height: 253px;
   }
   .mission-vision .statements h2{
     color: var(--Teal-blue);
@@ -2460,15 +2467,11 @@ Table of contents
     margin-right: 10px;
   }
   @media only screen and (max-width:767px){
-    .footer-bottom .company-name{
-      text-align: center;
-    }
     .footer-bottom .company-contact{
-      text-align: center;
+      text-align: left;
       margin: 0;
     }
     .footer-bottom .last-div{
-      text-align: center;
       margin: 10px 0;
     }
 

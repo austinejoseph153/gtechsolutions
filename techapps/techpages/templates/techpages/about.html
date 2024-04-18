@@ -8,10 +8,13 @@
         <div class="container">
             <div class="about-top-inner">
                 <h1>About us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores nobis incidunt,
-                    blanditiis doloremque asperiores est, perspiciatis quidem, tenetur reprehenderit 
-                    temporibus labore sed eaque expedita.
-                    Ipsa laboriosam odit laborum nesciunt ullam?
+                <p>
+                    Gtechsolutions is a globally recognized technology company that offers digital services. 
+                    We offer strategic solutions that will promote your business from where it is to where it ought to be.
+                    We offer services such as Web development, software development, Search Engine Optimization (SEO),
+                    database administration and management and data analysis, and are renowned for the quality services.
+                    Our staff are highly skiled in various technologies and sustain the energy, professional capability and expertise 
+                    to deliver to you the best of quality services that your brand deserves.
                 </p>
             </div>
         </div>
@@ -22,7 +25,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h2>Meet our team of experts</h2>
+                        <h2>Meet our team</h2>
                     </div>
                 </div>
             </div>
@@ -37,12 +40,9 @@
                             <div class="info">
                                 <div class="overlay">
                                     <h4>Desmond richman</h4>
-                                    <span>Full Stack Developer</span>
+                                    <span>backend Developer</span>
                                 </div>
                                 <div class="content">
-                                    <p>
-                                        Explain ten man uncivil engaged conduct. Am likewise betrayed as declared absolute do.
-                                    </p>
                                     <ul>
                                         <li class="facebook">
                                             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -66,20 +66,48 @@
                     <div class="col-md-4 single-item">
                         <div class="item">
                             <div class="thumb">
+                                <img src="{% static 'frontend/img/mercy.jpg' %}" alt="Thumb">
+                            </div>
+                            <div class="info">
+                                <div class="overlay">
+                                    <h4>Oloche Mercy</h4>
+                                    <span>UI/UX Designer</span>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li class="facebook">
+                                            <a href="https://www.facebook.com/oloche.mercy.5?mibextid=kFxxJD"><i class="fab fa-facebook-f"></i></a>
+                                        </li>
+                                        <li class="twitter">
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                        </li>
+                                        <li class="linkedin">
+                                            <a href="https://www.linkedin.com/in/mercy-oloche"><i class="fab fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li class="whatsapp">
+                                            <a href="https://wa.me/+2347050604163"><i class="fab fa-whatsapp"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-md-4 single-item">
+                        <div class="item">
+                            <div class="thumb">
                                 <img src="{% static 'frontend/img/gospel.jpg' %}" alt="Thumb">
                             </div>
                             <div class="info">
                                 <div class="overlay">
                                     <h4>Gospel Yimase</h4>
-                                    <span>Data analyst & Graphics designer</span>
+                                    <span>Data Analyst</span>
                                 </div>
                                 <div class="content">
-                                    <p>
-                                        Explain ten man uncivil engaged conduct. Am likewise betrayed as declared absolute do.
-                                    </p>
                                     <ul>
                                         <li class="facebook">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="https://www.facebook.com/profile.php?id=100077495807789"><i class="fab fa-facebook-f"></i></a>
                                         </li>
                                         <li class="twitter">
                                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -147,18 +175,17 @@
                 <div class="col-md-6">
                     <div class="statements text-center border-shadow">
                         <h2>Mission</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ut dolorem, 
-                            accusamus aliquam, unde obcaecati illo alias blanditiis nostrum est soluta 
-                            facilis? Facere, necessitatibus ad. Quisquam dolorum inventore et reiciendis 
+                        <p>
+                            To harness the power of technology to build high quality digital products, and render services that offers the best value to our customers
+                            that willenable them solve a business problem.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="statements text-center border-shadow">
                         <h2>Vision</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ut dolorem, 
-                            accusamus aliquam, unde obcaecati illo alias blanditiis nostrum est soluta 
-                            facilis? Facere, necessitatibus ad. Quisquam dolorum inventore et reiciendis 
+                        <p>To be globally recognized for the exceptional quality services we deliver and the positive
+                            impact we have made in the technological sphere. 
                         </p>
                     </div>
                 </div>
@@ -188,6 +215,5 @@
         $(window).on('resize', function() {
            SameHeight(".review-height")
         });
-
     </script>
 {% endblock %}

@@ -21,7 +21,7 @@ environ.Env.read_env('.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-DEBUG = env.bool("DJANGO_DEBUG", False)
+DEBUG = env.bool("DEBUG", False)
 
 
 # Application definition
@@ -88,17 +88,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# if env('DEBUG'):
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.mysql',
-#             'NAME': env('DATABASE_NAME'),
-#             'USER': env('DATABASE_USER'),
-#             'PASSWORD': env('DATABASE_PASSWORD'),
-#             'HOST': env('DATABASE_HOST', default='localhost'),
-#             'PORT': 3306
-#         }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': env('DATABASE_NAME'),
+#         'USER': env('DATABASE_USER'),
+#         'PASSWORD': env('DATABASE_PASSWORD'),
+#         'HOST': env('DATABASE_HOST', default='localhost'),
+#         'PORT': 3306
 #     }
+# }
 # else:
 DATABASES = {
     'default': dj_database_url.config(
