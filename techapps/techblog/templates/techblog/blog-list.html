@@ -8,7 +8,7 @@
     <div class="blog-top text-center text-light">
         <div class="container">
             <div class="blog-top-inner">
-                <h1>Welcome to Gtech solutions blog</h1>
+                <h1>Welcome to Gtechsolutions blog</h1>
                 <p>We publish thoughtful and insightful contents and information to help engage, entice and delight our readers.</p>
             </div>
         </div>
@@ -19,97 +19,50 @@
     ============================================= -->
     <div class="blog-items-area bg-gray">
         <div class="container">
-            <div class="top-bar">
+            {% if blogs|length > 0 %}
+                <div class="top-bar">
 
-            </div>
-            <div class="row">
-                <div class="blog-items">
-                    <!-- blog item -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item border-shadow">
-                            <figure class="blog-img">
-                                <img src="{% static 'frontend/img/image-2.jpg' %}" alt="">
-                                <figcaption class="text-light">
-                                    <span>Django for beginners</span>
-                                </figcaption>
-                            </figure>
-                            <div class="blog-info">
-                                <h4 class="blog-title">Django for beginners </h4>
-                                <div class="blog-author">
-                                    <p>Author: <span>Admin</span></p>
-                                    <p>Created: <span>01-03-2024</span></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                        Officiis modi laboriosam consequuntur debitis...
-                                    </p>
-                                </div>
-                                <div class="blog-link">
-                                    <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end blog item -->
-                    <!-- blog item -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item border-shadow">
-                            <figure class="blog-img">
-                                <img src="{% static 'frontend/img/image-3.jpg' %}" alt="">
-                                <figcaption class="text-light">
-                                    <span>Django for beginners</span>
-                                </figcaption>
-                            </figure>
-                            <div class="blog-info">
-                                <h4 class="blog-title">Django for beginners </h4>
-                                <div class="blog-author">
-                                    <p>Author: <span>Admin</span></p> 
-                                    <p>Created: <span>01-03-2024</span></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                        Officiis modi laboriosam consequuntur debitis...
-                                    </p>
-                                </div>
-                                <div class="blog-link">
-                                    <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end blog item -->
-                    <!-- blog item -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="blog-item border-shadow">
-                            <figure class="blog-img">
-                                <img src="{% static 'frontend/img/image-4.jpg' %}" alt="">
-                                <figcaption class="text-light">
-                                    <span>Django for beginners</span>
-                                </figcaption>
-                            </figure>
-                            <div class="blog-info">
-                                <h4 class="blog-title">Django for beginners </h4>
-                                <div class="blog-author">
-                                    <p>Author: <span>Admin</span></p>
-                                    <p>Created: <span>01-03-2024</span></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                        Officiis modi laboriosam consequuntur debitis...
-                                    </p>
-                                </div>
-                                <div class="blog-link">
-                                    <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end blog item -->
                 </div>
-            </div>
+                <div class="row">
+                    <div class="blog-items">
+                        <!-- blog item -->
+                        <div class="col-sm-6 col-md-4">
+                            <div class="blog-item border-shadow">
+                                <figure class="blog-img">
+                                    <img src="{% static 'frontend/img/image-2.jpg' %}" alt="">
+                                    <figcaption class="text-light">
+                                        <span>Django for beginners</span>
+                                    </figcaption>
+                                </figure>
+                                <div class="blog-info">
+                                    <h4 class="blog-title">Django for beginners </h4>
+                                    <div class="blog-author">
+                                        <p>Author: <span>Admin</span></p>
+                                        <p>Created: <span>01-03-2024</span></p>
+                                    </div>
+                                    <div class="blog-text">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                            Officiis modi laboriosam consequuntur debitis...
+                                        </p>
+                                    </div>
+                                    <div class="blog-link">
+                                        <a href="#">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end blog item -->
+                    </div>
+                </div>
+            {% else %}
+                <div class="empty-blog-container border-shadow">
+                    <h2>no blogs</h2>
+                    <img src="{% static 'frontend/img/icons8-empty-96.png' %}" alt="">
+                    <p>No blog have been published on this platform yet.</p>
+                </div>
+            {% endif %}
+            
         </div>
     </div>
     <!-- End Blog area -->

@@ -63,3 +63,15 @@ class ContactTemplateView(FormMixin,TemplateView):
     def form_valid(self, form):
         form.save()
         return super(ContactTemplateView, self).form_valid(form)
+
+class OrderTemplateView(FormMixin,TemplateView):
+    """
+    Pagina de quienes somos
+    """
+    template_name = "techpages/contact.html"
+    model = Contact
+    form_class = ContactForm
+
+    def get_context_data(self, **kwargs):
+        context = super(ContactTemplateView, self).get_context_data(**kwargs)
+        return context

@@ -12,6 +12,8 @@ class BlogListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(BlogListView, self).get_context_data(**kwargs)
+        blogs = PostField.objects.filter(is_public=True)
+        context["blogs"] = blogs
         return context
 
 

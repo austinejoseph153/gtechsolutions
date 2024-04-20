@@ -98,7 +98,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'PORT': 3306
 #     }
 # }
-# else:
 DATABASES = {
     'default': dj_database_url.config(
         default=env('DATABASE_URL'),
